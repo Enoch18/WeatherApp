@@ -23,36 +23,10 @@ export default class App extends Component<Props> {
     this.state = {text: ''};
   }
 
-  _onPress(){
-    alert('You tapped the button');
-  }
-
   render() {
     return (
       <View style={{flex: 1}}>
-        <View style = {{flex: 1, backgroundColor: 'blue', padding: 10}}>
-          <TextInput
-            style = {{height: 50}}
-            placeholder = "Type here..."
-            onChangeText = {(text) => this.setState({text})}
-          />
-
-          <Text style = {{padding: 10, fontSize: 42}}>
-            {this.state.text.split('').map((word) => word && '').join('')}
-          </Text>
-        </View>
-
-        <View style = {{flex: 2, backgroundColor: 'gray'}}>
-          <Text style={styles.welcome}>Welcome to Weather App</Text>
-          <Text style={styles.instructions}>To get started, edit App.js</Text>
-          <Text style={styles.instructions}>{instructions}</Text>
-        </View>
-
-        <TouchableHighlight onPress = {this._onPress}>
-          <View>
-            <Text>Press Me</Text>
-          </View>
-        </TouchableHighlight>
+        
       </View>
     );
   }
