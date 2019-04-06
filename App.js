@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TextInput, TouchableHighlight} from 'react-native';
+import {Platform, StyleSheet, Text, View, TextInput, TouchableHighlight, ImageBackground} from 'react-native';
 import FirstPage from './app/components/FirstPage/FirstPage.js';
 
 const instructions = Platform.select({
@@ -21,7 +21,24 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-          <FirstPage />
+      <ImageBackground
+        source = {require('WeatherApp/images/background1.jpg')}
+        style = {styles.container}
+        >
+        <FirstPage />
+      </ImageBackground>
     );
   }
 }
+
+var styles = StyleSheet.create({
+  container:{
+      flex: 1,
+  },
+
+  overlay:{
+      backgroundColor: 'black',
+      height: '30%',
+      opacity: 0.5
+  }
+});
