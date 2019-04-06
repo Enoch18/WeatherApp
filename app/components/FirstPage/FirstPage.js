@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
-import {AppRegistry, View, Text, StyleSheet} from 'react-native';
+import {AppRegistry, View, Text, StyleSheet, ImageBackground} from 'react-native';
 
 export default class FirstPage extends Component{
     render(){
         return(
-            <View>
-                <Text>Hey There I love Jesus</Text>
-            </View>
+            <ImageBackground 
+            source = {require('WeatherApp/images/background1.jpg')}
+            style = {styles.container}
+            >
+            </ImageBackground>
         );
     }
 }
 
-var style = StyleSheet.create({
-    
+var styles = StyleSheet.create({
+    container:{
+        flex: 1,
+    }
 });
 
 AppRegistry.registerComponent('FirstPage', () => FirstPage);
